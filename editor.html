@@ -1,0 +1,325 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+	<meta charset='UTF-8'> 
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="./data.js"></script>
+	<style type="text/css">
+		#newDataContainer {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: #eee;
+			padding: 10px;
+		}
+		#dataContainer {
+			padding-top: 40px;
+		}
+		form {
+			padding-bottom: 60px;
+		}
+		
+		.data-group, .data-imgs-group, .data-url-group  {
+			border: 1px solid #999;
+			padding: 20px;
+			box-sizing: border-box;
+			margin: 20px;
+		}
+		.data-group div, .data-group input, .data-group select, .data-group textarea {
+			width: 100%;
+			margin: 5px;
+			box-sizing: border-box;
+		}
+
+		#control {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 10px;
+			background: #eee;
+		}
+		#result {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			display: none;
+			background: white;
+			padding: 10px;
+		}
+
+		#result textarea {
+			width: 100%;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="" id="" name="">
+		<div id="newDataContainer">
+			<input style="width: 100%" placeholder="输入需要置顶的标题名称"></input>
+		</div>
+		<div id="dataContainer">
+		</div>
+	</form>
+	<div id="result">
+		<textarea></textarea>
+		<button onclick="$('#result').hide();">关闭</button>
+		<div>
+			复制并粘贴到data.js中，粘贴保存后需要修改请刷新页面重新载入数据。
+		</div>
+	</div>
+	<div id="control">
+		<button onclick="loadDataJs(); $(this).hide();">load</button>
+		<button onclick="generateDataJs(); $('#control').hide();">generate</button>
+		<div>
+			图片路径：./resource/imgs/
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var subs = {
+			no: '生肉',
+			jp: '日文',
+			cn: '中文',
+			cnjp: '中日'
+		};
+		
+		function loadDataJs(thisData = null, container = '', isNew = false) {
+			if(thisData === null) {
+				newDataTitle = [];
+				for(i in newData) {
+					newDataTitle.push(newData[i].name);
+				}
+				$('#newDataContainer input').val(newDataTitle.join('|'));
+				// loadDataJs(newData, '#newDataContainer', true);
+				loadDataJs(data, '#dataContainer');
+				return;
+			}
+
+			var dataContainer = $(container);
+			dataContainer.html('');
+			for(i in thisData){
+				var dataGroup = $('<div data-id-"' + i + '" class="data-group">');
+
+				dataGroup.append('<div>' + (parseInt(i) + 1) + (isNew ? ' New' : '') + '</div>');
+				dataGroup.append('<input type="text" name="name" value="' + thisData[i].name + '" placeholder="片名"/>');
+				dataGroup.append('<input type="text" name="url" value="' + thisData[i].url + '" placeholder="链接"/>');
+				dataGroup.append('<textarea name="detail" placeholder="详情">' + thisData[i].detail + '</textarea>');
+				dataGroup.append('<input type="text" name="other" value="' + thisData[i].other + '" placeholder="其他/中文/关键词"/>');
+				dataGroup.append('<input type="text" name="date" value="' + thisData[i].date + '" placeholder="日期"/>');
+
+				// 其他链接
+				var dataUrlsGroup = $('<div class="data-urls-group">');
+				for(j in thisData[i].urls) {
+					var dataUrlGroup = $('<div class="data-url-group">');
+					dataUrlGroup.append('<input type="text" name="author" value="' + thisData[i].urls[j]['author'] + '" placeholder="作者"/>');
+					var select = $('<select name="sub" placeholder="字幕">');
+					for(s in subs) {
+						select.append(
+							'<option value="' + s + '" ' + (s === thisData[i].urls[j]['sub']? 'selected' : '' ) + '>' + subs[s] + '</option>'
+						);
+					}
+					dataUrlGroup.append(select);
+					dataUrlGroup.append('<input type="text" name="urls_url" value="' + thisData[i].urls[j]['url'] + '" placeholder="链接"/>');
+					dataUrlGroup.append('<button name="" type="button" value="" onclick="delUrl(this)">删除urls</button>');
+					dataUrlsGroup.append(dataUrlGroup);
+				}
+				dataUrlsGroup.append('<button name="" type="button" value="" onclick="addUrl(this)">添加urls</button>');
+				dataGroup.append(dataUrlsGroup);
+
+				// 图
+				var dataImgsGroup = $('<div class="data-imgs-group">');
+				for(img in thisData[i].imgs) {
+					dataImgsGroup.append('<input type="text" name="imgs" value="' + thisData[i].imgs[img] + '" placeholder="图片链接" /><button name="" type="button" value="" onclick="delImg(this)">删除图片</button>');
+				}
+				dataImgsGroup.append('<button name="" type="button" value="" onclick="addImg(this)">添加图片</button>');
+				dataGroup.append(dataImgsGroup);
+
+				dataGroup.append('<button name="" type="button" value="" onclick="delDataGroup(this)">删除一组信息</button>')
+				dataContainer.append(dataGroup);
+			}
+			dataContainer.append('<button name="" data-isNew="' + isNew + '" type="button" value="" onclick="addDataGroup(this)">添加一组信息</button>')
+		}
+
+		// 添加图片
+		function addImg(el) {
+			$(el).before('<input type="text" name="imgs" value="" placeholder="图片链接" /><button name="" type="button" value="" onclick="delImg(this)">删除图片</button>');
+		}
+
+		// 删除图片
+		function delImg(el) {
+			$(el).prev().remove();
+			$(el).remove();
+		}
+
+		// 添加其他链接
+		function addUrl(el) {
+			var dataUrlGroup = $('<div class="data-url-group">');
+			dataUrlGroup.append('<input type="text" name="author" value="" placeholder="作者"/>');
+			var select = $('<select name="sub" placeholder="字幕">');
+			for(s in subs) {
+				select.append(
+					'<option value="' + s + '">' + subs[s] + '</option>'
+				);
+			}
+			dataUrlGroup.append(select);
+			dataUrlGroup.append('<input type="text" name="urls_url" value="" placeholder="链接"/>');
+			dataUrlGroup.append('<button name="" type="button" value="" onclick="delUrl(this)">删除urls</button>');
+
+			$(el).before(dataUrlGroup);
+		}
+
+		// 删除其他链接
+		function delUrl(el) {
+			$(el).closest('.data-url-group').remove();
+			$(el).remove();
+		}
+
+		function addDataGroup(el) {
+			var isNew = $(el).attr('data-isNew') === 'true';
+
+			var dataGroup = $('<div data-id-"' + i + '" class="data-group">');
+			dataGroup.append('<div>未保存 ' + (isNew ? ' New' : '') + '</div>');
+			dataGroup.append('<input type="text" name="name" value="" placeholder="片名"/>');
+			dataGroup.append('<input type="text" name="url" value="" placeholder="链接"/>');
+			dataGroup.append('<textarea name="detail" placeholder="详情"></textarea>');
+			dataGroup.append('<input type="text" name="other" value="" placeholder="其他/中文/关键词"/>');
+			dataGroup.append('<input type="text" name="date" value="" placeholder="日期"/>');
+
+			// 其他链接
+			var dataUrlsGroup = $('<div class="data-urls-group">');
+			dataUrlsGroup.append('<button name="" type="button" value="" onclick="addUrl(this)">添加urls</button>');
+			dataGroup.append(dataUrlsGroup);
+
+			// 图
+			var dataImgsGroup = $('<div class="data-imgs-group">');
+			dataImgsGroup.append('<button name="" type="button" value="" onclick="addImg(this)">添加图片</button>');
+			dataGroup.append(dataImgsGroup);
+
+			dataGroup.append('<button name="" type="button" value="" onclick="delDataGroup(this)">删除一组信息</button>')
+			$(el).before(dataGroup);
+		}
+
+		function delDataGroup(el) {
+			$(el).closest('.data-group').remove();
+			$(el).remove();
+		}
+
+		function generateDataJs(el = null, isNew = false) {
+			//if(el === null) {
+			//	var result = "var listInfo = {updated_at: '" + (new Date()).format('yyyy-MM-dd hh:mm:ss') + "'};";
+			//	result += generateDataJs('#newDataContainer', true);
+			//	result += generateDataJs('#dataContainer');
+			//	$('#result').show();
+			//	$('#result textarea').text(result);
+			//	return;
+			//}
+
+			var newDataTitle = $('#newDataContainer input').val().split('|');
+
+			var result = "var listInfo = {updated_at: '" + (new Date()).format('yyyy-MM-dd hh:mm:ss') + "'};";
+			var thisData = [];
+			var thisNewData = [];
+			var dataGroups = $('#dataContainer').find('.data-group');
+			for(var dataGroup of dataGroups) {
+				var json = {};
+				json.name = $(dataGroup).find('[name=name]').val();
+				json.url = $(dataGroup).find('[name=url]').val();
+				json.detail = $(dataGroup).find('[name=detail]').val().replace(/[(^*\n*)|(^*\r*)]/g,'<br />');
+				json.other = $(dataGroup).find('[name=other]').val();
+				json.date = $(dataGroup).find('[name=date]').val();
+
+				json.urls = [];
+				var dataUrlsGroup = $(dataGroup).find('.data-urls-group .data-url-group');
+				for(var dataUrlGroup of dataUrlsGroup) {
+					json.urls.push({
+						'author': $(dataUrlGroup).find("[name=author]").val(),
+						'sub': $(dataUrlGroup).find("[name=sub]").val(),
+						'url': $(dataUrlGroup).find("[name=urls_url]").val(),
+					});
+				}
+				// url排序
+				var subsIndex = {};
+				var subCount = 0;
+				for(sub in subs) {
+					subsIndex[sub] = subCount;
+					subCount++;
+				}
+				json.urls.sort(function(a, b) {
+					var aSub = a.sub;
+					var bSub = b.sub;
+					return subsIndex[aSub] - subsIndex[bSub];
+				});
+
+				json.imgs = [];
+				var dataImgsGroup = $(dataGroup).find('.data-imgs-group input[name=imgs]');
+				for(var dataImgGroup of dataImgsGroup) {
+					json.imgs.push($(dataImgGroup).val());
+				}
+				
+				thisData.push(json);
+				// 判断是否在标题置顶数据中，是则push到置顶数据数组。
+				if(newDataTitle.indexOf(json.name) >= 0) {
+					thisNewData.push(json);
+				}
+			}
+
+			// 排序
+			//if(isNew) {
+				thisNewData = thisNewData.sort(function(a, b) {
+					var aDate = (new Date(a.date)).getTime();
+					var bDate = (new Date(b.date)).getTime();
+					return bDate - aDate;
+				});
+			//} else {
+				thisData = thisData.sort(function(a, b) {
+					var aDate = (new Date(a.date)).getTime();
+					var bDate = (new Date(b.date)).getTime();
+					return aDate - bDate;
+				});
+			//}
+
+			//var varName = isNew ? 'newData' : 'data';
+			result += "var newData = " + JSON.stringify(thisNewData) + ";";
+			result += "var data = " + JSON.stringify(thisData) + ";";
+
+			$('#result').show();
+			$('#result textarea').text(result);
+		}
+
+
+
+
+
+
+
+		/**
+		 *对Date的扩展，将 Date 转化为指定格式的String
+		 *月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+		 *年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+		 *例子：
+		 *(new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+		 *(new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18
+		 */
+		Date.prototype.format = function (fmt) {
+		    var o = {
+		        "M+": this.getMonth() + 1, //月份
+		        "d+": this.getDate(), //日
+		        "h+": this.getHours(), //小时
+		        "m+": this.getMinutes(), //分
+		        "s+": this.getSeconds(), //秒
+		        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+		        "S": this.getMilliseconds() //毫秒
+		    };
+		    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		    for (var k in o)
+		        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+		    return fmt;
+		}
+	</script>
+</body>
+</html>
