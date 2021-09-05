@@ -205,8 +205,10 @@
 		}
 
 		function delDataGroup(el) {
-			$(el).closest('.data-group').remove();
-			$(el).remove();
+			if (confirm("确定要删除该组信息吗？")) {
+				$(el).closest('.data-group').remove();
+				$(el).remove();
+			}
 		}
 
 		function generateDataJs(el = null, isNew = false) {
