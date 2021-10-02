@@ -158,7 +158,8 @@ function downloadFile(zip, eyecatches, parseDatum, index) {
                 });
         },
         error:function(xhr, err){
-            console.log(xhr, err)
+            // 重试
+            downloadFile(zip, eyecatches, parseDatum, index)
         }
     });
 }
