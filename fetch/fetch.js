@@ -5,6 +5,8 @@ let parseData = []
 let totalApiEpisode = 0
 let totalApiImgs = 0
 let debugImgs = 0
+let zipBlobCount = 0
+let mainZip = new JSZip()
 
 /**
  * 从API接口获取数据
@@ -58,11 +60,11 @@ function getData(depth) {
  * 处理API接口数据
  * @param resData
  */
-function dataHandler(resData) {
+async function dataHandler(resData) {
     resData.forEach(function (resDatum) {
         totalApiEpisode++
 
-        let parseDatum = [];
+        let parseDatum = {};
         let eyecatches = resDatum.eyecatch ? [resDatum.eyecatch] : []
         eyecatches = eyecatches.concat(resDatum.eyecatches ? resDatum.eyecatches : [])
         parseDatum.name = convertName(resDatum.name)
@@ -77,6 +79,8 @@ function dataHandler(resData) {
         parseDatum.version = 2;
         // 新数据默认需要更新图片
         let updateImgs = true;
+
+        let zip = new JSZip()
 
         if (parseDatum.imgs.length > 1) {
             totalApiImgs++
@@ -100,12 +104,59 @@ function dataHandler(resData) {
         if (updateImgs && eyecatchesLen > 1) {
             let zipFileNum = 0;
 
-            let zip = new JSZip()
-            downloadFile(zip, eyecatches, parseDatum, 0)
-
             for (let i in eyecatches) {
                 let url = eyecatches[i].main.url
                 let filename = url.replace(/^.*\//g, '');
+                fetch(url)       // 1) fetch the url
+                    .then(function (response) {                       // 2) filter on 200 OK
+                        if (response.status === 200 || response.status === 0) {
+                            zip.file(filename, response.blob())
+
+                            zipFileNum++
+                            if(zipFileNum < eyecatchesLen) {
+                                return;
+                            }
+
+                            zip.generateAsync({type:"blob"}, function updateCallback(metadata) {
+                                var msg = "progression : " + metadata.percent.toFixed(2) + " %";
+                                if(metadata.currentFile) {
+                                    msg += ", current file = " + metadata.currentFile;
+                                }
+                                // console.log(msg);
+                            })
+                                .then(function callback(blob) {
+                                    mainZip.file(parseDatum.name + ".zip", blob)
+                                    zipBlobCount++
+
+                                    console.log(parseDatum.name + ".zip", zipBlobCount)
+
+                                    if (zipBlobCount < totalApiImgs) {
+                                        return
+                                    }
+
+                                    // 再打包
+                                    mainZip.generateAsync({type:"blob"}, function updateCallback(metadata) {
+                                        var msg = "progression : " + metadata.percent.toFixed(2) + " %";
+                                        if(metadata.currentFile) {
+                                            msg += ", current file = " + metadata.currentFile;
+                                        }
+                                        console.log(msg);
+                                    })
+                                        .then(function callback(blob2) {
+                                            // see FileSaver.js
+                                            saveAs(blob2, "all.zip");
+                                        }, function (e) {
+                                            console.log(e);
+                                        });
+                                }, function (e) {
+                                    console.log(e);
+                                });
+                        } else {
+                            return Promise.reject(new Error(response.statusText));
+                        }
+                    })
+
+
                 parseDatum.imgs.push('./resource/imgs/' + filename)
             }
 
@@ -114,54 +165,6 @@ function dataHandler(resData) {
 
         parseData.push(parseDatum)
     })
-}
-
-function downloadFile(zip, eyecatches, parseDatum, index) {
-    if (index >= eyecatches.length) {
-        return
-    }
-
-    let url = eyecatches[index].main.url
-    let filename = url.replace(/^.*\//g, '');
-
-    jQuery.ajax({
-        url: url,
-        cache: false,
-        xhr: function () {
-            var xhr = new XMLHttpRequest()
-            xhr.responseType = 'arraybuffer'
-            return xhr
-        },
-        success: function(data){
-            zip.file(filename, data)
-
-            if(index < eyecatches.length - 1) {
-                downloadFile(zip, eyecatches, parseDatum, ++index)
-                return
-            }
-
-            zip.generateAsync({type:"blob"}, function updateCallback(metadata) {
-                var msg = "progression : " + metadata.percent.toFixed(2) + " %";
-                if(metadata.currentFile) {
-                    msg += ", current file = " + metadata.currentFile;
-                }
-                // console.log(msg);
-            })
-                .then(function callback(blob) {
-                    debugImgs++
-                    console.log(debugImgs)
-
-                    // see FileSaver.js
-                    saveAs(blob, parseDatum.name + ".zip");
-                }, function (e) {
-                    console.log(e);
-                });
-        },
-        error:function(xhr, err){
-            // 重试
-            downloadFile(zip, eyecatches, parseDatum, index)
-        }
-    });
 }
 
 /**
