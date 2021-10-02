@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2021-10-2 17:00:09'}
+var listInfo = {updated_at: '2021-10-2 17:21:31'}
 var newData = []
 var data = [
     {

@@ -4,9 +4,10 @@ let offset = 0
 let parseData = []
 let totalApiEpisode = 0
 let totalApiImgs = 0
-let debugImgs = 0
 let zipBlobCount = 0
 let mainZip = new JSZip()
+
+let finishParse = false
 
 /**
  * 从API接口获取数据
@@ -18,6 +19,7 @@ function getData(depth) {
         offset = 0
         totalApiEpisode = 0
         totalApiImgs = 0
+        finishParse = false
     }
 
     $.ajax({
@@ -43,6 +45,8 @@ function getData(depth) {
         },
         error: function(xhr) {
             if (xhr.status === 404) {
+                finishParse = true
+
                 localDataHandler()
                 parseData.sort(function(a, b) {
                     var aDate = (new Date(a.releasedEvent.startDateFmt)).getTime();
@@ -50,7 +54,7 @@ function getData(depth) {
                     return aDate - bDate;
                 });
                 console.log(parseData)
-                console.log(totalApiImgs, totalApiEpisode,debugImgs)
+                console.log(totalApiImgs, totalApiEpisode)
             }
         }
     })
@@ -130,9 +134,13 @@ async function dataHandler(resData) {
 
                                     console.log(parseDatum.name + ".zip", zipBlobCount)
 
-                                    if (zipBlobCount < totalApiImgs) {
+                                    if (
+                                        !(zipBlobCount >= totalApiImgs && finishParse)
+                                    ) {
                                         return
                                     }
+
+                                    console.log(zipBlobCount, totalApiImgs)
 
                                     // 再打包
                                     mainZip.generateAsync({type:"blob"}, function updateCallback(metadata) {
@@ -140,7 +148,8 @@ async function dataHandler(resData) {
                                         if(metadata.currentFile) {
                                             msg += ", current file = " + metadata.currentFile;
                                         }
-                                        console.log(msg);
+                                        $('#imageZipProcess').text(msg)
+                                        // console.log(msg);
                                     })
                                         .then(function callback(blob2) {
                                             // see FileSaver.js
