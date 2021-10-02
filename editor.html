@@ -89,6 +89,14 @@
 		};
 		
 		function loadDataJs(thisData = null, container = '', isNew = false) {
+			data.sort(function(a, b) {
+				var aDate = (new Date(a.releasedEvent.startDateFmt)).getTime();
+				var bDate = (new Date(b.releasedEvent.startDateFmt)).getTime();
+				return bDate - aDate;
+			});
+			console.log(data)
+			return;
+
 			if(thisData === null) {
 				newDataTitle = [];
 				for(i in newData) {
