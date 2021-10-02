@@ -79,8 +79,14 @@ var data = [
             "startDateFmt": "2021/09/24"
         },
         "url": "",
-        "urls": [],
-        "other": "",
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV12f4y1w7hZ"
+            },
+        ],
+        "other": "2021 东京之夏",
         "imgs": [
             "./resource/imgs/PM4G959Y6Z-eyecatch_4d629972ff4bad81588e3912b484d384.jpg",
             "./resource/imgs/PM4G959Y6Z-eyecatches_f89838ef1edd46bbcc7a5c0cf02e3ea3.jpg",
@@ -169,8 +175,14 @@ var data = [
             "startDateFmt": "2021/09/17"
         },
         "url": "",
-        "urls": [],
-        "other": "",
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1Wb4y1y7Z1"
+            },
+        ],
+        "other": "多摩丘陵",
         "imgs": [
             "./resource/imgs/E81KN15GGK-eyecatch_a5c80f65efaa6d39f6071610326c31aa.jpg",
             "./resource/imgs/E81KN15GGK-eyecatches_df8ac47d361afca0e80552b6e5becc22.jpg",
@@ -259,7 +271,7 @@ var data = [
         },
         "url": "",
         "urls": [],
-        "other": "",
+        "other": "叶子的樱花",
         "imgs": [
             "./resource/imgs/Q3V9KP14R8-eyecatch_d0f98f8f047af2a8e03900792721fe3e.jpg",
             "./resource/imgs/Q3V9KP14R8-eyecatches_4daf5314b889d17f79a0b2f6c5299e7d.jpg",
@@ -346,12 +358,17 @@ var data = [
             },
             "startDateFmt": "2021/08/20"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV1h44y1b757",
         "urls": [
             {
                 "author": "秋爸是奶爸",
                 "sub": "jp",
                 "url": "https://www.bilibili.com/video/BV1sv411N7BR"
+            },
+            {
+                "author": "STS涅槃字幕组",
+                "sub": "cnjp",
+                "url": "https://www.bilibili.com/video/BV1644y187H3"
             }
         ],
         "other": "立山 地狱 极乐 巡游",
@@ -445,7 +462,7 @@ var data = [
             },
             "startDateFmt": "2021/07/30"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV17U4y1N7WP",
         "urls": [
             {
                 "author": "秋爸是奶爸",
@@ -4819,9 +4836,9 @@ var data = [
             "startDate": "2018-01-19T21:00:00+09:00",
             "startDateFmt": "2018/01/19"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV13v411G7jj",
         "urls": [],
-        "other": "",
+        "other": "八户",
         "imgs": [
             "./resource/imgs/Q77MZ3ZN3Q-eyecatch_904a99125933a3002866597f10b507f3.png",
             "./resource/imgs/Q77MZ3ZN3Q-eyecatches_b1883b0213e06272a1ec1e24418312f1.png",
@@ -6401,6 +6418,29 @@ var data = [
         "version": 2
     },
     {
+        "name": "「奥の細道」",
+        "description": "松尾芭蕉が記した紀行文集の集大成「奥の細道」は、今も東北を語る上で欠かせない旅のバイブルのひとつ。<br />１６８９年。弟子の河合曾良を伴い、老体に鞭をうって約１５０日間に渡り東北・北陸を旅した芭蕉。美しい自然や文化・風土に出会い、辿り着いた境地は「不易流行」。変わっていくものと変わらないものは不即不離の関係にある、という考えだ。<br />東日本大震災で、甚大な被害を受けた東北にも、変わったもの、そして３２０年の時を越え今もなお変わらないものが共存している。<br />江戸時代の「田植え唄」を歌い継ぐ須賀川の農婦たち。津波で多くの人と街を失った石巻の地で出される「鎮魂の御輿」。芭蕉が愛でた紅の花が夏を彩る「尾花沢」。芭蕉の句に心揺さぶられた男性が、奥の細道を追体験する「馬旅」。嵐の中、亡くなった人を思い、死と再生の祈りを捧げる人が集まる霊山「月山」。<br />老いと死を覚悟しつつも過酷な旅に挑み、傑作を誕生させた芭蕉。「奥の細道」を道しるべに、今再び、東北の魅力を再発見する。",
+        "url": "",
+        "urls": [
+            {
+                "author": "Nyawapan(プレミアムカフェ)",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1ob411z7jR"
+            }
+        ],
+        "other": "奥之细道",
+        "imgs": [
+            "./resource/imgs/7b0b913dc7c86da40b23e56970197f79_ll.jpg",
+            "./resource/imgs/a1344797c41af4fae8926ae2482aa299_ll.jpg",
+            "./resource/imgs/181424bbaafa1fc5738b6ed307dfdc41_ll.jpg",
+            "./resource/imgs/a9ac53f042a26eef407f33c23cc352bc_ll.jpg"
+        ],
+        "releasedEvent": {
+            "startDate": "2012/08/31",
+            "startDateFmt": "2012/08/31"
+        }
+    },
+    {
         "name": "「うどん」",
         "description": "手軽な庶民の味として日本人に愛されてきたうどん。コメの国・日本は稲作を中心に語られるが、その裏で雑穀の歴史も紡がれてきた。米が満足に食べられなかった庶民は、小麦を育て、手間暇かけてうどんを作り、ささやかな贅沢を楽しんだ。五穀豊穣を祈る神への捧げものとして。僧侶の修行の中の楽しみとして。うどんは今なお日本人にとって大切な食べもの。日本人の知恵と工夫が育んだ「うどん」を通して日本の歴史を見つめ直す。",
         "url": "https://www.bilibili.com/video/BV1QE411Z7E9?p=6",
@@ -6665,28 +6705,5 @@ var data = [
             "startDate": "2011/07/01",
             "startDateFmt": "2011/07/01"
         }
-    },
-    {
-        "name": "「奥の細道」",
-        "description": "松尾芭蕉が記した紀行文集の集大成「奥の細道」は、今も東北を語る上で欠かせない旅のバイブルのひとつ。<br />１６８９年。弟子の河合曾良を伴い、老体に鞭をうって約１５０日間に渡り東北・北陸を旅した芭蕉。美しい自然や文化・風土に出会い、辿り着いた境地は「不易流行」。変わっていくものと変わらないものは不即不離の関係にある、という考えだ。<br />東日本大震災で、甚大な被害を受けた東北にも、変わったもの、そして３２０年の時を越え今もなお変わらないものが共存している。<br />江戸時代の「田植え唄」を歌い継ぐ須賀川の農婦たち。津波で多くの人と街を失った石巻の地で出される「鎮魂の御輿」。芭蕉が愛でた紅の花が夏を彩る「尾花沢」。芭蕉の句に心揺さぶられた男性が、奥の細道を追体験する「馬旅」。嵐の中、亡くなった人を思い、死と再生の祈りを捧げる人が集まる霊山「月山」。<br />老いと死を覚悟しつつも過酷な旅に挑み、傑作を誕生させた芭蕉。「奥の細道」を道しるべに、今再び、東北の魅力を再発見する。",
-        "url": "",
-        "urls": [
-            {
-                "author": "Nyawapan(プレミアムカフェ)",
-                "sub": "jp",
-                "url": "https://www.bilibili.com/video/BV1ob411z7jR"
-            }
-        ],
-        "other": "奥之细道",
-        "imgs": [
-            "./resource/imgs/7b0b913dc7c86da40b23e56970197f79_ll.jpg",
-            "./resource/imgs/a1344797c41af4fae8926ae2482aa299_ll.jpg",
-            "./resource/imgs/181424bbaafa1fc5738b6ed307dfdc41_ll.jpg",
-            "./resource/imgs/a9ac53f042a26eef407f33c23cc352bc_ll.jpg"
-        ],
-        "releasedEvent": {
-            "startDate": "2012/08/31",
-            "startDateFmt": "2012/08/31"
-        }
-    },
+    }
 ]
