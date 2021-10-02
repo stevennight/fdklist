@@ -51,7 +51,7 @@ function getData(depth) {
                 parseData.sort(function(a, b) {
                     var aDate = (new Date(a.releasedEvent.startDateFmt)).getTime();
                     var bDate = (new Date(b.releasedEvent.startDateFmt)).getTime();
-                    return aDate - bDate;
+                    return bDate - aDate;
                 });
                 console.log(parseData)
                 console.log(totalApiImgs, totalApiEpisode)
@@ -97,9 +97,10 @@ async function dataHandler(resData) {
                 parseDatum.urls = datum.urls
                 parseDatum.other = datum.other
                 parseDatum.imgs = datum.imgs
-                parseDatum.version = datum.version ? datum.version : 1;
+                parseDatum.version = 2;
                 // 如果js里面的数据已经是版本2的数据（来源于官方API）则不更新图片了，否则更新图片。
-                updateImgs = parseDatum.version === 1
+                updateImgs =
+                    ((datum.version ? datum.version : 1) === 1)
             }
         }
 
@@ -188,16 +189,17 @@ function localDataHandler() {
             }
         }
 
+        let datumDate = datum.date ? datum.date : datum.releasedEvent.startDate
         let parseDatum = {
             name: convertName(datum.name),
-            description: datum.detail,
+            description: datum.detail ? datum.detail : datum.description,
             url: datum.url,
             urls: datum.urls,
             other: datum.other,
             imgs: datum.imgs,
             releasedEvent: {
-                startDate: datum.date,
-                startDateFmt: new Date(datum.date).format('yyyy/MM/dd')
+                startDate: new Date(datumDate).format('yyyy/MM/dd'),
+                startDateFmt: new Date(datumDate).format('yyyy/MM/dd')
             }
         };
         parseData.push(parseDatum)
