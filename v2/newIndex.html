@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>视频列表</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+	<meta charset='UTF-8'> 
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<script src="newData.js?v=9"></script>
+	<style type="text/css">
+		* {
+			user-select: none;
+			cursor: pointer;
+		}
+
+		#header {
+			position: fixed;
+			padding: 10px;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: #fff;
+			border-bottom: 1px solid #ccc;
+			z-index: 1000; 
+		}
+		#search {
+			text-align: center;
+			padding: 10px 0 0 0;
+		}
+		#search #search_keyword{
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		#search label {
+			line-height: 40px;
+		}
+
+		#num {
+			text-align: center;
+		}
+
+		#list {
+			padding-top: 120px;
+			padding-bottom: 55px;
+		}
+		#list .emptyResult{
+			margin-top: 10px;
+			text-align: center;
+			padding: 10px 0;
+			border: 1px solid #ccc;
+			background: #ccc;
+		}
+		#list .item {
+			margin-top: 10px;
+		}
+		#list .item .title{
+			text-align: center;
+			padding: 10px;
+			border: 1px solid #ccc;
+			background: #ccc;
+		}
+		#list .hide_block {
+			display: none;
+			background: #eee;
+		}
+		#list .item .detail{
+			padding: 10px;
+		}
+		#list .item .watch{
+			padding: 10px;
+			text-align: center;
+			background: #A80000;
+			color: white;
+			font-weight: bolder;
+			border-bottom: 1px solid white
+		}
+		#list .item .watch.no-resource{
+			background: #666;
+		}
+		#list .item .urls{
+			padding: 10px;
+			text-align: center;
+			background: #000099;
+			color: white;
+			font-weight: bolder;
+			border-bottom: 1px solid white
+		}
+		#list .item .urlsTitle {
+			color: #666;
+			text-align: center;
+		}
+		#list .item a{
+			color: white;
+			text-decoration: none;
+		}
+
+		#footer {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin-top: 10px;
+			padding: 10px;
+			text-align: center;
+			color: #666;
+			border-top: 1px solid #ccc;
+			background: #fff;
+			font-size: 10px;
+		}
+
+		.detail-images {
+			padding: 10px;
+		}
+		.slick-prev {
+		    z-index: 999;
+			left: 25px;
+		}
+		.slick-next {
+		    z-index: 999;
+			right: 25px;
+		}
+		.slick-prev:before, .slick-next:before {
+			font-size: 30px;
+		}
+		
+		#bigPic {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0,0,0,0.6);
+			z-index: 1001;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		
+		#bigPic div {
+			text-align: center
+		}
+		
+		#bigPic img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="bigPic" onclick="closeBigPic(this)" style="display: none">
+		<div><img src=""></div>
+	</div>
+	<div id="header">
+		<div id="search">
+			<input id="search_keyword" placeholder="搜索（输入日文/中文标题或首播时间[如2011/1/1]）" />
+			<label>
+				<input id="search_filterEmpty" type="checkbox">过滤无资源项
+			</label>
+		</div>
+		<div id="num">
+			共<span class="listcount">0</span>项<span style="font-size: 10px; color: #666">（更新时间：<span class="updated_at"></span>）</span>
+		</div>
+	</div>
+	<div id='list'>
+	</div>
+	<div id="footer">资源收集自网络，本站点不存储任何资源。新链接提交、失效链接报告、链接删除申请、信息完善以及功能建议，请<a style="text-decoration: underline;" onclick="window.open('http://baidu.com')">点击这里</a>。</div>
+	<script type="text/javascript">
+		// 显示更新时间。
+		$(".updated_at").text(listInfo.updated_at);
+	
+		var subText = {
+			no: '生肉无字',
+			jp: '日文字幕',
+			cn: '中文字幕',
+			cnjp: '中日双语',
+		};
+		var filterData = data;
+
+		$('#search_keyword').on('input', function(){
+			var keyword = $(this).val();
+			var filterEmpty = $('#search_filterEmpty').is(':checked');
+			searchItem(keyword, filterEmpty);
+		});
+		$('#search_filterEmpty').on('input', function(){
+			var keyword = $('#search_keyword').val();
+			var filterEmpty = $(this).is(':checked');
+			searchItem(keyword, filterEmpty);
+		});
+		function searchItem(keyword, filterEmpty){
+			var count = 0;
+			var filter = [];
+
+			keyword = keyword.replace(' ', '|');
+
+			for(i in data){
+				var item = data[i];
+				var episode_name = item.name;
+				var episode_other = item.other;
+				var episode_date = item.releasedEvent.startDateFmt;
+				var episode_url = item.url;
+				var episode_urls = item.urls;
+
+				//过滤无资源项
+				if(episode_url === '' && episode_urls.length < 1  && filterEmpty){
+					continue;
+				}
+
+				//匹配关键词
+				var reg = new RegExp('(' + keyword + ')');
+				if(reg.test(episode_name) || reg.test(episode_other) || reg.test(episode_date)){
+					filter.push(item);
+					count++;
+				}
+
+			}
+			filterData = filter;
+			renderList();
+		}
+
+		$('#list').on('click', '.title', function(){
+			var hideBlockEl = $(this).parent().find('.hide_block');
+			if(hideBlockEl.css('display') === 'none'){
+				// 加载图片
+				added = false;
+				hideBlockEl.find('img').each(function(i, e){
+					if(!$(e).attr('data-src')) return;
+					$(e).attr('src', $(e).attr('data-src'));
+					$(e).removeAttr('data-src');
+					added = true;
+				});
+				added && hideBlockEl.find('.detail-images').slick({
+					autoplay: true,
+					autoplaySpeed: 3000
+				});
+				hideBlockEl.slideDown();
+			} else {
+				hideBlockEl.slideUp();
+			}
+		});
+
+		$('#list').on('click', '.watch', function(){
+			var url = $(this).parent().parent().attr('data-url');
+			if(!url) {
+				alert('暂无资源');
+				return;
+			}
+			window.open(url);
+		});
+
+		function renderList(){
+			$('#list').html('');
+			$('#num .listcount').text(filterData.length);
+
+			for(i in filterData){
+				var item = filterData[i];
+
+				var imagesElText = '';
+				for(j in item.imgs) {
+					imagesElText += '<div style="max-height:300px; width: 100%;"><img onclick="openBigPic(this)" style="margin: auto; max-height: 300px; max-width: 100%" data-src="' + item.imgs[j] + '"/></div>';
+				}
+				
+				html = '<div class="item" data-name="' + item.name + '" data-date="' + item.releasedEvent.startDateFmt + '" data-other="' + item.other + '" data-url="' + item.url + '"><div class="title">' + item.releasedEvent.startDateFmt + ' ' + item.name + ' <span>▾</span></div><div class="hide_block"><div class="detail-images">' + imagesElText + '</div><div class="detail">' + item.description + '</div><div class="watch ' + (item.url?'':'no-resource') + '">' + (item.url?'观看':'暂无资源') + '</div>';
+
+				var urlsLength = 0;
+				var urlsHtml = '<div class="urlsTitle">其它资源</div>';
+				for(i in item.urls){
+					var other = item.urls[i];
+					var author = other.author;
+					var url = other.url;
+					var sub = other.sub;
+					urlsHtml += '<div class="urls" onclick="window.open(\'' + url + '\')">' + author + ' ' + subText[sub] + '</div>'
+					urlsLength++;
+				}
+				urlsHtml += '</div>';
+				if(urlsLength){
+					html += urlsHtml;
+				}
+
+				html += '</div></div>';
+				$('#list').append(html);
+			}
+			if(filterData.length < 1){
+				$('#list').append('<div class="emptyResult">无结果，可以尝试在搜索关键词中添加空格</div>');
+			}
+		}
+
+		window.onload = renderList;
+
+
+		function openBigPic(el){
+			el = $(el);
+			var bigPicEl = $('#bigPic');
+			bigPicEl.find('img').attr('src', el.attr('src'));
+			bigPicEl.show();
+		}
+		
+		function closeBigPic(el){
+			el = $(el);
+			el.hide();
+		}
+	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
