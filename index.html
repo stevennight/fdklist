@@ -201,7 +201,7 @@
 				var item = data[i];
 				var episode_name = item.name;
 				var episode_other = item.other;
-				var episode_date = item.date;
+				var episode_date = item.releasedEvent.startDateFmt;
 				var episode_url = item.url;
 				var episode_urls = item.urls;
 
@@ -256,35 +256,6 @@
 			$('#list').html('');
 			$('#num .listcount').text(filterData.length);
 
-			for(i in newData){
-				var item = newData[i];
-
-				var imagesElText = '';
-				for(j in item.imgs) {
-					imagesElText += '<div style="max-height:300px; width: 100%;"><img onclick="openBigPic(this)" style="margin: auto; max-height: 300px; max-width: 100%" data-src="' + item.imgs[j] + '"/></div>';
-				}
-				
-				html = '<div class="item" data-name="' + item.name + '" data-date="' + item.date + '" data-other="' + item.other + '" data-url="' + item.url + '"><div class="title"><span style="color: red">New!!</span> ' + item.date + ' ' + item.name + ' <span>▾</span></div><div class="hide_block"><div class="detail-images">' + imagesElText + '</div><div class="detail">' + item.detail + '</div><div class="watch ' + (item.url?'':'no-resource') + '">' + (item.url?'观看':'暂无资源') + '</div>';
-
-				var urlsLength = 0;
-				var urlsHtml = '<div class="urlsTitle">其它资源</div>';
-				for(i in item.urls){
-					var other = item.urls[i];
-					var author = other.author;
-					var url = other.url;
-					var sub = other.sub;
-					urlsHtml += '<div class="urls" onclick="window.open(\'' + url + '\')">' + author + ' ' + subText[sub] + '</div>'
-					urlsLength++;
-				}
-				urlsHtml += '</div>';
-				if(urlsLength){
-					html += urlsHtml;
-				}
-
-				html += '</div></div>';
-				$('#list').append(html);
-			}
-
 			for(i in filterData){
 				var item = filterData[i];
 
@@ -293,7 +264,7 @@
 					imagesElText += '<div style="max-height:300px; width: 100%;"><img onclick="openBigPic(this)" style="margin: auto; max-height: 300px; max-width: 100%" data-src="' + item.imgs[j] + '"/></div>';
 				}
 				
-				html = '<div class="item" data-name="' + item.name + '" data-date="' + item.date + '" data-other="' + item.other + '" data-url="' + item.url + '"><div class="title">' + item.date + ' ' + item.name + ' <span>▾</span></div><div class="hide_block"><div class="detail-images">' + imagesElText + '</div><div class="detail">' + item.detail + '</div><div class="watch ' + (item.url?'':'no-resource') + '">' + (item.url?'观看':'暂无资源') + '</div>';
+				html = '<div class="item" data-name="' + item.name + '" data-date="' + item.releasedEvent.startDateFmt + '" data-other="' + item.other + '" data-url="' + item.url + '"><div class="title">' + item.releasedEvent.startDateFmt + ' ' + item.name + ' <span>▾</span></div><div class="hide_block"><div class="detail-images">' + imagesElText + '</div><div class="detail">' + item.description + '</div><div class="watch ' + (item.url?'':'no-resource') + '">' + (item.url?'观看':'暂无资源') + '</div>';
 
 				var urlsLength = 0;
 				var urlsHtml = '<div class="urlsTitle">其它资源</div>';
@@ -318,7 +289,7 @@
 			}
 		}
 
-		window.onload = renderList; 
+		window.onload = renderList;
 
 
 		function openBigPic(el){
