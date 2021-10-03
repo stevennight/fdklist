@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2021-10-2 23:05:52'}
+var listInfo = {updated_at: '2021-10-3 15:15:20'}
 var data = [
     {
         "name": "「2021 東京の夏」",
@@ -5324,7 +5324,9 @@ var data = [
             {
                 "author": "幻月字幕组",
                 "sub": "cnjp",
-                "url": "https://www.bilibili.com/video/BV1Mx411p74M"
+                "url": "https://www.bilibili.com/video/BV1Mx411p74M",
+                "available": false,
+                "msg": "啊叻？视频不见了？"
             }
         ],
         "other": "秋叶原",

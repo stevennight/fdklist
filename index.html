@@ -79,8 +79,8 @@
 			font-weight: bolder;
 			border-bottom: 1px solid white
 		}
-		#list .item .watch.no-resource{
-			background: #666;
+		#list .item .no-resource{
+			background: #666!important;
 		}
 		#list .item .urls{
 			padding: 10px;
@@ -273,7 +273,13 @@
 					var author = other.author;
 					var url = other.url;
 					var sub = other.sub;
-					urlsHtml += '<div class="urls" onclick="window.open(\'' + url + '\')">' + author + ' ' + subText[sub] + '</div>'
+					var available = other.available !== undefined ? other.available : true;
+					var msg = other.msg;
+					if (available) {
+						urlsHtml += '<div class="urls" onclick="window.open(\'' + url + '\')">' + author + ' ' + subText[sub] + '</div>'
+					} else {
+						urlsHtml += '<div class="urls no-resource" onclick="alert(\'' + msg + '\')"><s>' + author + ' ' + subText[sub] + '</s></div>'
+					}
 					urlsLength++;
 				}
 				urlsHtml += '</div>';
