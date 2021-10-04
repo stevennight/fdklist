@@ -2,12 +2,13 @@ const apiUrl = 'https://api.nhk.jp/r6/l/tvepisode/ts/X8R36PYLX3.json'
 const perSize = 10
 let offset = 0
 let parseData = []
+// 统计总集数
 let totalApiEpisode = 0
+// 统计需要下载图片的集数
 let totalApiImgs = 0
-let zipBlobCount = 0
-let mainZip = new JSZip()
 
-let finishParse = false
+// 需要下载的图片数据数组
+let waitDownloadImage = [];
 
 /**
  * 从API接口获取数据
@@ -19,7 +20,6 @@ function getData(depth) {
         offset = 0
         totalApiEpisode = 0
         totalApiImgs = 0
-        finishParse = false
     }
 
     $.ajax({
@@ -45,8 +45,6 @@ function getData(depth) {
         },
         error: function(xhr) {
             if (xhr.status === 404) {
-                finishParse = true
-
                 localDataHandler()
                 parseData.sort(function(a, b) {
                     var aDate = (new Date(a.releasedEvent.startDateFmt)).getTime();
@@ -55,6 +53,10 @@ function getData(depth) {
                 });
                 console.log(parseData)
                 console.log(totalApiImgs, totalApiEpisode)
+
+                console.log("开始下载图片")
+                downloadImage()
+                console.log("下载图片结束")
             }
         }
     })
@@ -84,10 +86,7 @@ async function dataHandler(resData) {
         // 新数据默认需要更新图片
         let updateImgs = true;
 
-        let zip = new JSZip()
-
         if (parseDatum.imgs.length > 1) {
-            totalApiImgs++
         }
 
         for (let i=0; i<data.length; i++) {
@@ -107,70 +106,16 @@ async function dataHandler(resData) {
         // 图片处理（
         let eyecatchesLen = eyecatches.length
         if (updateImgs && eyecatchesLen > 1) {
-            let zipFileNum = 0;
-
+            totalApiImgs++
             for (let i in eyecatches) {
                 let url = eyecatches[i].main.url
                 let filename = url.replace(/^.*\//g, '');
-                fetch(url)       // 1) fetch the url
-                    .then(function (response) {                       // 2) filter on 200 OK
-                        if (response.status === 200 || response.status === 0) {
-                            zip.file(filename, response.blob())
-
-                            zipFileNum++
-                            if(zipFileNum < eyecatchesLen) {
-                                return;
-                            }
-
-                            zip.generateAsync({type:"blob"}, function updateCallback(metadata) {
-                                var msg = "progression : " + metadata.percent.toFixed(2) + " %";
-                                if(metadata.currentFile) {
-                                    msg += ", current file = " + metadata.currentFile;
-                                }
-                                // console.log(msg);
-                            })
-                                .then(function callback(blob) {
-                                    mainZip.file(parseDatum.name + ".zip", blob)
-                                    zipBlobCount++
-
-                                    console.log(parseDatum.name + ".zip", zipBlobCount)
-
-                                    if (
-                                        !(zipBlobCount >= totalApiImgs && finishParse)
-                                    ) {
-                                        return
-                                    }
-
-                                    console.log(zipBlobCount, totalApiImgs)
-
-                                    // 再打包
-                                    mainZip.generateAsync({type:"blob"}, function updateCallback(metadata) {
-                                        var msg = "progression : " + metadata.percent.toFixed(2) + " %";
-                                        if(metadata.currentFile) {
-                                            msg += ", current file = " + metadata.currentFile;
-                                        }
-                                        $('#imageZipProcess').text(msg)
-                                        // console.log(msg);
-                                    })
-                                        .then(function callback(blob2) {
-                                            // see FileSaver.js
-                                            saveAs(blob2, "all.zip");
-                                        }, function (e) {
-                                            console.log(e);
-                                        });
-                                }, function (e) {
-                                    console.log(e);
-                                });
-                        } else {
-                            return Promise.reject(new Error(response.statusText));
-                        }
-                    })
-
-
+                waitDownloadImage.push({
+                    url: url,
+                    filename: filename
+                })
                 parseDatum.imgs.push('./resource/imgs/' + filename)
             }
-
-            totalApiImgs++
         }
 
         parseData.push(parseDatum)
@@ -204,6 +149,46 @@ function localDataHandler() {
         };
         parseData.push(parseDatum)
     })
+}
+
+function downloadImage() {
+    let zip = new JSZip()
+    let totalImageNum = waitDownloadImage.length
+    let imageAddedNum = 0
+
+    for (let i in waitDownloadImage) {
+        let url = waitDownloadImage[i].url
+        let filename = waitDownloadImage[i].filename
+        fetch(url)       // 1) fetch the url
+            .then(function (response) {                       // 2) filter on 200 OK
+                if (response.status === 200 || response.status === 0) {
+                    zip.file(filename, response.blob())
+
+                    imageAddedNum++
+
+                    if (imageAddedNum < totalImageNum) {
+                        return
+                    }
+
+                    // 打包生成zip并输出
+                    zip.generateAsync({type:"blob"}, function updateCallback(metadata) {
+                        var msg = "progression : " + metadata.percent.toFixed(2) + " %";
+                        if(metadata.currentFile) {
+                            msg += ", current file = " + metadata.currentFile;
+                        }
+                        $('#imageZipProcess').text(msg)
+                        // console.log(msg);
+                    })
+                        .then(function callback(blob) {
+                            saveAs(blob, "all.zip");
+                        }, function (e) {
+                            console.log(e);
+                        });
+                } else {
+                    return Promise.reject(new Error(response.statusText));
+                }
+            })
+    }
 }
 
 // 片名转换
