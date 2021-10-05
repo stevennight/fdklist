@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2021-10-3 15:15:20'}
+var listInfo = {updated_at: '2021-10-5 15:27:40'}
 var data = [
     {
         "name": "「2021 東京の夏」",
@@ -78,7 +78,7 @@ var data = [
             },
             "startDateFmt": "2021/09/24"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV1pQ4y1X7a7",
         "urls": [
             {
                 "author": "秋爸是奶爸",
@@ -174,7 +174,7 @@ var data = [
             },
             "startDateFmt": "2021/09/17"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV1fq4y1R7bm",
         "urls": [
             {
                 "author": "秋爸是奶爸",
