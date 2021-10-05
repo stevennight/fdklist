@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2021-10-5 15:27:40'}
+var listInfo = {updated_at: '2021-10-5 15:50:20'}
 var data = [
     {
         "name": "「2021 東京の夏」",
@@ -5953,6 +5953,11 @@ var data = [
                 "author": "胖笑轻",
                 "sub": "no",
                 "url": "https://www.bilibili.com/video/BV1Xx411j7AY"
+            },
+            {
+                "author": "Nyawapan(プレミアムカフェ)",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1y44y147MG"
             }
         ],
         "other": "寿司",
