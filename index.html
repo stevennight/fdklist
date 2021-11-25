@@ -278,7 +278,7 @@
 					if (available) {
 						urlsHtml += '<div class="urls" onclick="window.open(\'' + url + '\')">' + author + ' ' + subText[sub] + '</div>'
 					} else {
-						urlsHtml += '<div class="urls no-resource" onclick="alert(\'' + msg + '\')"><s>' + author + ' ' + subText[sub] + '</s></div>'
+						urlsHtml += '<div title="' + msg + '" class="urls no-resource" onclick="alert(\'' + msg + '\')"><s>' + author + ' ' + subText[sub] + '</s></div>'
 					}
 					urlsLength++;
 				}

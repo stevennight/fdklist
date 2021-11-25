@@ -42,9 +42,12 @@
 			//获取所有要检查的链接
 			var url = [];
 			for(j in current.urls){
+				if (current.urls[j].url.indexOf("bilibili.com") === -1) {
+					continue;
+				}
 				url.push(current.urls[j].url);
 			};
-			if(current.url){
+			if(current.url && current.url.indexOf("bilibili.com") !== -1){
 				url.push(current.url);
 			}
 

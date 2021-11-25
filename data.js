@@ -1,10 +1,296 @@
-var listInfo = {updated_at: '2021-10-5 15:50:20'}
+var listInfo = {updated_at: '2021年11月25日 22点04分'}
 var data = [
+    {
+        "name": "「木曽路の宿場町」",
+        "description": "黒い格子の家並みが、江戸情緒を醸し出す。木曽川沿いに点在する、“木曽十一宿”と呼ばれた中山道の宿場町だ。平安時代からヒノキの産地と知られ、豊臣秀吉以降は時の為政者が山林を管理してきた。今も７割ほどが国有林。山は食材の宝庫、秋には松茸狩り名人が腕を競う。人々は山を畏怖し、敬って生きる。水源の神をまつる町の人、伝統の木曽馬を神馬として育てる農家など、山深い木曽に暮らす人々の素顔の日常を描く。",
+        "releasedEvent": {
+            "id": "s3-130-2021111231869",
+            "startDate": "2021-11-12T21:00:00+09:00",
+            "endDate": "2021-11-12T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/11/12"
+        },
+        "url": "https://zfile.24-7to.icu/s/qi2b61",
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV16R4y1t7Ne"
+            }
+        ],
+        "other": "",
+        "imgs": [
+            "./resource/imgs/5L1XZ5VYX7-eyecatch_5e00fe1c9f87f484e8529c4e856b7fb4.jpg",
+            "./resource/imgs/5L1XZ5VYX7-eyecatches_04f72d8b09aabcfe6c82f37afbd6c053.jpg",
+            "./resource/imgs/5L1XZ5VYX7-eyecatches_295d7acf169ca2ff57b77379f4e86e01.jpg",
+            "./resource/imgs/5L1XZ5VYX7-eyecatches_56d0107458dd802a9eb856462bab8db4.jpg",
+            "./resource/imgs/5L1XZ5VYX7-eyecatches_f0f2fb8e600751ddbbe6f2a971ace05a.jpg"
+        ],
+        "version": 2
+    },
+    {
+        "name": "「お風呂の旅」",
+        "description": "身も心も優しく包むお湯につかれば、溜まっていたものもすーっと消えてゆく。秘湯、名湯に、ちょっとレトロな町中の銭湯。自粛疲れを癒やしたい今だからこそ、風土記が十年かけて取材したとっておきの「お風呂」をまとめて届ける。雪景色の山小屋で登山者を癒す天空の風呂。熱海や湯布院などの温泉地で、地元の人だけが知る小さな名湯。奈良時代からの由緒ある温泉には、地元の仲間が毎日朝湯に集う。お湯の極楽を愛する人々の物語",
+        "releasedEvent": {
+            "id": "s3-130-2021102922628",
+            "startDate": "2021-10-29T21:00:00+09:00",
+            "endDate": "2021-10-29T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/10/29"
+        },
+        "url": "https://www.bilibili.com/video/BV1P34y1Z7Fz",
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1uL41137iw"
+            }
+        ],
+        "other": "温泉之旅",
+        "imgs": [
+            "./resource/imgs/VR5PGQ5GQX-eyecatch_5382e134d1620c650b8c34e602eb315c.jpg",
+            "./resource/imgs/VR5PGQ5GQX-eyecatches_110d7bfd5e5d21a360eafd3383aad1e7.jpg",
+            "./resource/imgs/VR5PGQ5GQX-eyecatches_cc114bc6d9540290801fefb22e71f380.jpg",
+            "./resource/imgs/VR5PGQ5GQX-eyecatches_595dffc1e3d0cbef71495dcdf4a0760f.jpg",
+            "./resource/imgs/VR5PGQ5GQX-eyecatches_8f64912b0398fd14e9b16696f3862b59.jpg"
+        ],
+        "version": 2
+    },
+    {
+        "name": "「銚子電鉄 とっぱずれの旅」",
+        "description": "「ほととぎす　銚子は国の　とっぱずれ」と江戸時代の句に詠まれた、銚子（千葉県）が今回の舞台。小さな岬の付け根から先端までを結ぶ、わずか６．４ｋｍのローカル線《銚子電鉄》の沿線をめぐる。前向きで、どこかのんびりした“愛され鉄道”銚電。こんなたたずまいも、黒潮の恵みと利根川水運が潤してきた“銚子気質”なのかもしれない。漁業と醤油で知られる銚子、鉄道沿線の人達のひと夏の営みに、人情を探す旅。",
+        "releasedEvent": {
+            "startDate": "2021-10-22T21:00:00+09:00",
+            "endDate": "2021-10-22T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/10/22"
+        },
+        "url": "https://www.bilibili.com/video/BV1p44y1i7yS",
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1mL411G7Es"
+            }
+        ],
+        "other": "铫子电铁 一次旅行",
+        "imgs": [
+            "./resource/imgs/21562GNKRV-eyecatch_3319d5571c0dd53ec4590acd2f4b42e7.jpg",
+            "./resource/imgs/21562GNKRV-eyecatches_81da0be35bb88eb492e4e8711a5cbe9b.jpg",
+            "./resource/imgs/21562GNKRV-eyecatches_e946e2ea050f87805e69c5e69b0b6f2c.jpg",
+            "./resource/imgs/21562GNKRV-eyecatches_4e8e819dd61f114dee611fb5a2919c61.jpg",
+            "./resource/imgs/21562GNKRV-eyecatches_e38a777372f4cd8f3fafabc26b267132.jpg"
+        ],
+        "version": 2
+    },
     {
         "name": "「2021 東京の夏」",
         "description": "史上初めて、１年延期して開催された東京オリンピック。しかし、新型コロナの感染が再拡大し、不安が広がる中での開催だった。新型コロナとオリンピックに揺れた東京の夏。どんな人がどんな思いで過ごしたのだろう。３０歳、最後の大舞台に挑んだプロボクサー。３年に１度の祭りが中止となり、静かな夏を過ごす下町の人々。都内の公園で行われた炊き出しに集まる若者たち。いつもとは違う夏、自分らしく生きようとする人々の物語。",
         "releasedEvent": {
-            "id": "s3-130-2021092400195",
             "startDate": "2021-09-24T21:00:00+09:00",
             "endDate": "2021-09-24T22:00:00+09:00",
             "publishedOn": {
@@ -85,6 +371,11 @@ var data = [
                 "sub": "jp",
                 "url": "https://www.bilibili.com/video/BV12f4y1w7hZ"
             },
+            {
+                "author": "STS涅槃字幕组",
+                "sub": "jpcn",
+                "url": "https://www.bilibili.com/video/BV1oL4y1B7H7"
+            }
         ],
         "other": "2021 东京之夏",
         "imgs": [
@@ -100,7 +391,6 @@ var data = [
         "name": "「多摩丘陵」",
         "description": "都心から急行電車で４０分。丘の上の町並みのそばに、昔ながらの雑木林や古街道が残る土地に着く。東京から横浜にかけて広がる多摩丘陵だ。この地に５０年前に誕生したのが“日本最大規模”の多摩ニュータウン。かつては酪農や養蚕が盛んだった農村地帯は、瞬く間に緑の中に団地や大学キャンパスが建ち並ぶ街へと変貌した。古きもの、新しきもの、多くの人々を受け入れながら歴史を刻んできた、多摩丘陵に生きる人々の夏物語。",
         "releasedEvent": {
-            "id": "s3-130-2021091730915",
             "startDate": "2021-09-17T21:00:00+09:00",
             "endDate": "2021-09-17T22:00:00+09:00",
             "publishedOn": {
@@ -180,7 +470,7 @@ var data = [
                 "author": "秋爸是奶爸",
                 "sub": "jp",
                 "url": "https://www.bilibili.com/video/BV1Wb4y1y7Z1"
-            },
+            }
         ],
         "other": "多摩丘陵",
         "imgs": [
@@ -486,7 +776,7 @@ var data = [
     },
     {
         "name": "「夫婦の旅 山あり谷あり」",
-        "description": "人と人の距離が、これほど遠く感じる日が来るなんて。新型コロナの影響で、結婚する人が減っている。令和２年の婚姻件数は、戦後最少。そんな今だからこそ、夫婦のありようを見つめてみたい。老舗煎餅屋で修行中の若夫婦。三味線弾きの夫を歌で支える妻。四国の山間の村でつつましく暮らす老夫婦。離れていても互いを思いあう夫婦…。今も昔も、一番遠くて近い人、心温まる夫婦の物語を、列島各地を巡りながら紡いでいく。",
+        "description": "人と人の距離が、これほど遠く感じる日が来るなんて。新型コロナの影響で、結婚する人が減っている。令和２年の婚姻件数は、戦後最少。そんな今だからこそ、夫婦のありようを見つめてみたい。老舗煎餅屋で修行中の若夫婦。三味線弾きの夫を歌で支える妻。四国の山間の村で暮らす老夫婦。離れていても互いを思いあう夫婦…。今も昔も、一番遠くて近い人、心温まる夫婦の物語を、列島各地を巡りながら紡いでいく。（２０２１年放送）",
         "releasedEvent": {
             "startDate": "2021-07-16T21:00:00+09:00",
             "endDate": "2021-07-16T22:00:00+09:00",
@@ -4889,6 +5179,25 @@ var data = [
             "startDate": "2017/11/17",
             "startDateFmt": "2017/11/17"
         }
+    },
+    {
+        "name": "「実りの秋」",
+        "description": "山がもみじで真っ赤に染まり、里では稲穂がたわわに実る日本の秋。人々は恵みに感謝し、やがて来る冬に備える。長野では松茸（まつたけ）名人が“宝の山”に向かい、福島県の大内宿では毎日裏山に通いクリ拾いをする女性がいる。そして南の島では、来年の豊作を祈る儀式が…。北は北海道・知床から、南は奄美大島まで。日本列島、実りの秋の物語です。（２０１７年放送）",
+        "releasedEvent": {
+            "startDate": "2017-11-03T21:00:00+09:00",
+            "startDateFmt": "2017/11/03"
+        },
+        "url": "https://www.bilibili.com/video/BV1ag411A78h",
+        "urls": [],
+        "other": "硕果累累的秋天",
+        "imgs": [
+            "./resource/imgs/KXVM47XVX5-eyecatch_cbcefd96921db43927449c83b380d569.jpg",
+            "./resource/imgs/KXVM47XVX5-eyecatches_8fd710ce4a0706fd8d82be07a4384d74.jpg",
+            "./resource/imgs/KXVM47XVX5-eyecatches_bb400a77ae6cf8c73082d0869b8daf6b.jpg",
+            "./resource/imgs/KXVM47XVX5-eyecatches_393c7aeb59294f017d97174e883beb25.jpg",
+            "./resource/imgs/KXVM47XVX5-eyecatches_24eb294fcf418ded6cdf81c39eb5e741.jpg"
+        ],
+        "version": 2
     },
     {
         "name": "「仙台」",
