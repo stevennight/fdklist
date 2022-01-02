@@ -1,10 +1,296 @@
-var listInfo = {updated_at: '2021年11月25日 22点23分'}
+var listInfo = {updated_at: '2022年1月2日15时42分'}
 var data = [
+    {
+        "name": "「沖縄 コザ」",
+        "description": "来年本土復帰５０年の節目を迎える沖縄。その象徴とも言えるのが、米軍嘉手納基地の門前町として栄えたコザ（現・沖縄市）。戦後、米国などの影響を受け発展したコザは、４０ヶ国以上の外国人が暮らす国際色豊かな町。本場のエイサーや島唄など沖縄文化と、米国のロックやインド、ラテンなどが融合した独特の文化が広がる。基地との共生を強いられながらも、豊かなチャンプルー文化をたくましく育んできたコザの風土と暮らしを描く",
+        "releasedEvent": {
+            "id": "s3-130-2021122423213",
+            "startDate": "2021-12-24T21:00:00+09:00",
+            "endDate": "2021-12-24T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/12/24"
+        },
+        "url": "https://www.bilibili.com/video/BV1SS4y1f7Ff",
+        "urls": [
+			{
+				"author": "秋爸是奶爸",
+				"sub": "jp",
+				"url": "https://www.bilibili.com/video/BV1s44y177LV"
+			}
+		],
+        "other": "冲绳",
+        "imgs": [
+            "./resource/imgs/ZG2XWWQXRV-eyecatch_4b1c1d8a5b3a249a60ccb95e02e42485.jpg",
+            "./resource/imgs/ZG2XWWQXRV-eyecatches_11de181e1812e82f6155a032486d881f.jpg",
+            "./resource/imgs/ZG2XWWQXRV-eyecatches_1d01e5c13338da642b99576b55ff6f14.jpg",
+            "./resource/imgs/ZG2XWWQXRV-eyecatches_12b9eaabce08adfd9f2282888d2d8fda.jpg",
+            "./resource/imgs/ZG2XWWQXRV-eyecatches_649d67e28a10894ca69093af1d4e4338.jpg"
+        ],
+        "version": 2
+    },
+    {
+        "name": "「東京のアメリカ」",
+        "description": "焼け野原から始まった首都・東京の戦後。敗戦以来、ＧＨＱ本部が置かれた東京には占領軍がもたらすアメリカ文化が浸透。東京は生活様式、音楽、ファッション、食文化など、アメリカの豊かさを取り入れることで復興、経済成長を成し遂げていった。一方で東京には米軍基地などが今も残る。日米開戦から今年で８０年。敗戦、占領の記憶が薄れていく中、東京のアメリカの今を辿り、そこで暮らす人たちの多様なアメリカ像を描く。",
+        "releasedEvent": {
+            "id": "s3-130-2021121014288",
+            "startDate": "2021-12-10T21:00:00+09:00",
+            "endDate": "2021-12-10T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/12/10"
+        },
+        "url": "https://www.bilibili.com/video/BV1K44y1j7Ee",
+        "urls": [
+			{
+				"author": "秋爸是奶爸",
+				"sub": "jp",
+				"url": "https://www.bilibili.com/video/BV15g411w7nY"
+			}
+		],
+        "other": "东京的美国",
+        "imgs": [
+            "./resource/imgs/8Q1WGXXPGJ-eyecatch_5fc5bc422da43fc540bf5b7fb73dde3e.jpg",
+            "./resource/imgs/8Q1WGXXPGJ-eyecatches_8af2bd297fe0ae84bce596a79d1b04dc.jpg",
+            "./resource/imgs/8Q1WGXXPGJ-eyecatches_9558ccbd909d68cf7f19992dff4081b0.jpg",
+            "./resource/imgs/8Q1WGXXPGJ-eyecatches_63a0eb02d9081b1d25895737f61e464d.jpg",
+            "./resource/imgs/8Q1WGXXPGJ-eyecatches_b2142e1274991177e2871cc75497e9d8.jpg"
+        ],
+        "version": 2
+    },
+    {
+        "name": "「オクシズ 奥静岡」",
+        "description": "古くから徳川家康の城下町として栄えてきた静岡市。その北部、豊かな自然が残る中山間地を最近では「オクシズ（奥静岡）」と名づけ、市はその魅力をＰＲしている。かつてオクシズには１３００年の歴史を誇る金山があり、江戸時代には「慶長小判」の主な材料として用いられた。各地から人が行き来し、様々な文化や風習、作物がこの地に根付いた。歴史上、重要な役割を果たし、静岡の文化や経済を支えてきた地域の今を見つめる物語。",
+        "releasedEvent": {
+            "startDate": "2021-11-26T21:00:00+09:00",
+            "endDate": "2021-11-26T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2021/11/26"
+        },
+        "url": "https://www.bilibili.com/video/BV1eF411q7fi",
+        "urls": [
+			{
+				"author": "秋爸是奶爸",
+				"sub": "jp",
+				"url": "https://www.bilibili.com/video/BV1cY411s7S7"
+			}
+		],
+        "other": "奥静岡",
+        "imgs": [
+            "./resource/imgs/NZ7VGW3LYQ-eyecatch_fe13737a2c181e92a5f0636a2fe385ee.jpg",
+            "./resource/imgs/NZ7VGW3LYQ-eyecatches_af09a61553846b5a35bfbc49e67c0db4.jpg",
+            "./resource/imgs/NZ7VGW3LYQ-eyecatches_f5a0456e6a08de53ab18f89ee7da8a4e.jpg",
+            "./resource/imgs/NZ7VGW3LYQ-eyecatches_024f60bc0148ec9d807c897975045d5b.jpg",
+            "./resource/imgs/NZ7VGW3LYQ-eyecatches_2f0c0c0586d6dac5b25d27b0a9042c60.jpg"
+        ],
+        "version": 2
+    },
     {
         "name": "「木曽路の宿場町」",
         "description": "黒い格子の家並みが、江戸情緒を醸し出す。木曽川沿いに点在する、“木曽十一宿”と呼ばれた中山道の宿場町だ。平安時代からヒノキの産地と知られ、豊臣秀吉以降は時の為政者が山林を管理してきた。今も７割ほどが国有林。山は食材の宝庫、秋には松茸狩り名人が腕を競う。人々は山を畏怖し、敬って生きる。水源の神をまつる町の人、伝統の木曽馬を神馬として育てる農家など、山深い木曽に暮らす人々の素顔の日常を描く。",
         "releasedEvent": {
-            "id": "s3-130-2021111231869",
             "startDate": "2021-11-12T21:00:00+09:00",
             "endDate": "2021-11-12T22:00:00+09:00",
             "publishedOn": {
@@ -86,7 +372,7 @@ var data = [
                 "url": "https://www.bilibili.com/video/BV16R4y1t7Ne"
             }
         ],
-        "other": "",
+        "other": "木曾路 宿场町",
         "imgs": [
             "./resource/imgs/5L1XZ5VYX7-eyecatch_5e00fe1c9f87f484e8529c4e856b7fb4.jpg",
             "./resource/imgs/5L1XZ5VYX7-eyecatches_04f72d8b09aabcfe6c82f37afbd6c053.jpg",
@@ -100,7 +386,6 @@ var data = [
         "name": "「お風呂の旅」",
         "description": "身も心も優しく包むお湯につかれば、溜まっていたものもすーっと消えてゆく。秘湯、名湯に、ちょっとレトロな町中の銭湯。自粛疲れを癒やしたい今だからこそ、風土記が十年かけて取材したとっておきの「お風呂」をまとめて届ける。雪景色の山小屋で登山者を癒す天空の風呂。熱海や湯布院などの温泉地で、地元の人だけが知る小さな名湯。奈良時代からの由緒ある温泉には、地元の仲間が毎日朝湯に集う。お湯の極楽を愛する人々の物語",
         "releasedEvent": {
-            "id": "s3-130-2021102922628",
             "startDate": "2021-10-29T21:00:00+09:00",
             "endDate": "2021-10-29T22:00:00+09:00",
             "publishedOn": {
@@ -180,6 +465,11 @@ var data = [
                 "author": "秋爸是奶爸",
                 "sub": "jp",
                 "url": "https://www.bilibili.com/video/BV1uL41137iw"
+            },
+			{
+                "author": "STS涅槃字幕组",
+                "sub": "cnjp",
+                "url": "https://www.bilibili.com/video/BV1PM4y1c7uh"
             }
         ],
         "other": "温泉之旅",
@@ -373,7 +663,7 @@ var data = [
             },
             {
                 "author": "STS涅槃字幕组",
-                "sub": "jpcn",
+                "sub": "cnjp",
                 "url": "https://www.bilibili.com/video/BV1oL4y1B7H7"
             }
         ],
@@ -4882,18 +5172,6 @@ var data = [
             "startDate": "2018-04-13T21:00:00+09:00",
             "startDateFmt": "2018/04/13"
         },
-        "url": "",
-        "urls": [],
-        "other": "",
-        "imgs": [
-            "./resource/imgs/9PV2JW271N-eyecatch_0b787113076b0c653eac7b7e0a88241e.jpg",
-            "./resource/imgs/9PV2JW271N-eyecatches_2f8e881d24adf406f6a0224266d47059.jpg"
-        ],
-        "version": 2
-    },
-    {
-        "name": "「ハワイ 第2回」",
-        "description": "150年前の明治元年、ハワイに初めて日本の移民が到着し、日系人社会の礎となった。戦前は人口の４割を占めるほど発展した日系人だったが、太平洋戦争が始まり、受難の時代を迎える。軍に志願し、戦後は高速道路や銀行の設立など、ハワイ発展のために尽くした二世たち。ハワイ名産のコナコーヒーの農園を120年にわたり守る男たち。そして、明治元年・始まりの移民の子孫が守るタロイモ畑など、第２回は、男たちの物語。",
         "url": "https://www.bilibili.com/video/BV1QE411Z7E9?p=59",
         "urls": [
             {
@@ -4907,12 +5185,12 @@ var data = [
                 "url": "https://www.bilibili.com/video/BV1vW411V7aW"
             }
         ],
-        "other": "夏威夷",
-        "imgs": [],
-        "releasedEvent": {
-            "startDate": "2018/04/13",
-            "startDateFmt": "2018/04/13"
-        }
+        "other": "夏威夷 第二回",
+        "imgs": [
+            "./resource/imgs/9PV2JW271N-eyecatch_0b787113076b0c653eac7b7e0a88241e.jpg",
+            "./resource/imgs/9PV2JW271N-eyecatches_2f8e881d24adf406f6a0224266d47059.jpg"
+        ],
+        "version": 2
     },
     {
         "name": "「ハワイ第1回」",
@@ -4921,15 +5199,6 @@ var data = [
             "startDate": "2018-04-06T21:00:00+09:00",
             "startDateFmt": "2018/04/06"
         },
-        "url": "",
-        "urls": [],
-        "other": "",
-        "imgs": [],
-        "version": 2
-    },
-    {
-        "name": "「ハワイ 第1回」",
-        "description": "今から150年前の明治元年、ハワイに初めて日本の移民が到着し、現在の日系人社会の礎となった。移民たちはサトウキビ農場で小作農として苦闘し、やがて自分の農場を持ちハワイの風土に溶け込んでいった。名産の花、アンスリウムを育み、暮らしを支えた女性たち。祖母から孫に受け継がれてきたホテルは多くの日系人の物語を見守ってきた。さらにルーツを求めて何十年ぶりに日本に帰る人。日系人の歩んだ人生を通じて描くハワイ。",
         "url": "https://www.bilibili.com/video/BV1QE411Z7E9?p=58",
         "urls": [
             {
@@ -4943,12 +5212,9 @@ var data = [
                 "url": "https://www.bilibili.com/video/BV1CW411G7KA"
             }
         ],
-        "other": "夏威夷",
+        "other": "夏威夷 第一回",
         "imgs": [],
-        "releasedEvent": {
-            "startDate": "2018/04/06",
-            "startDateFmt": "2018/04/06"
-        }
+        "version": 2
     },
     {
         "name": "「渡良瀬川」",
@@ -5522,15 +5788,22 @@ var data = [
     },
     {
         "name": "「湯布院」",
-        "description": "大分県・中部にある由布市・湯布院町。全国2位の源泉数を誇る温泉や雄大な自然、おしゃれでアートの香りがする町は、誰もがあこがれる“癒やしの里”として、全国屈指の人気を誇る。しかし、かつての湯布院は、農業以外の産業がない、ありふれた田舎町だった。高度成長期の観光ブームの波からも乗り遅れ、時代に取り残された“何もない町”だった。<br />そこに襲ったのが昭和５０年の大地震。復興をめざして始まった試行錯誤の中で、地元の人々は“本当の豊かさ”とは何かを追求する。暮らしに無くてはならない温泉をはじめ、“そこにあるもの”を大切にしながら、あえて時代と逆行する町づくりを進め、辻馬車や映画祭など“湯布院らしい”試みを次々に生み出していった。<br />今年４月の熊本地震の影響で、湯布院は再び窮地に陥った。しかし、逆境にめげないＤＮＡは今も脈々と受け継がれ、“湯布院らしさ”は健在だ。おしゃれだけど、温かい。懐かしいけど、新しい。あこがれの温泉地・湯布院はいかにして生まれたのか、その奥深い魅力を探る。",
+        "description": "全国２位の源泉数（利用中の源泉数）を誇る温泉や雄大な自然、おしゃれでアートの香り漂う町、湯布院。“癒やしの里”として全国屈指の人気だ。しかし、かつては高度成長期の観光ブームの波にも乗り遅れた“何もない町”だった。そこに襲った昭和５０年の大地震。復興をめざし始まった試行錯誤の中で、地元の“ありのまま”を大切にしながら、町づくりを進めた。新しいけど、懐かしい。湯布院の奥深い魅力に迫る（２０１６年放送）",
+        "releasedEvent": {
+            "startDate": "2016-12-02T21:00:00+09:00",
+            "startDateFmt": "2016/12/02"
+        },
         "url": "https://www.bilibili.com/video/BV1QE411Z7E9?p=40",
         "urls": [],
         "other": "汤布院",
-        "imgs": [],
-        "releasedEvent": {
-            "startDate": "2016/12/02",
-            "startDateFmt": "2016/12/02"
-        }
+        "imgs": [
+            "./resource/imgs/7JRLNX3V78-eyecatch_b3f1f4731b1c3723da5d2987cbdf50df.jpg",
+            "./resource/imgs/7JRLNX3V78-eyecatches_3176b42ec28d7bec5c17e94b335161d0.jpg",
+            "./resource/imgs/7JRLNX3V78-eyecatches_ad2a9fe062ea7a70a139f8a1e3e412d1.jpg",
+            "./resource/imgs/7JRLNX3V78-eyecatches_c821ca5b215c068947fd3bae1b48a8c8.jpg",
+            "./resource/imgs/7JRLNX3V78-eyecatches_966d5aaef0ada09ff969d5c3d839b98e.jpg"
+        ],
+        "version": 2
     },
     {
         "name": "「十勝」",
@@ -5885,7 +6158,7 @@ var data = [
         },
         "url": "",
         "urls": [],
-        "other": "",
+        "other": "那须",
         "imgs": [
             "./resource/imgs/P75WK6K2JZ-eyecatch_12b4b4d40b49ae8aaaddbfeca306797b.jpg",
             "./resource/imgs/P75WK6K2JZ-eyecatches_6583cf38e7700b5d9a1a83fd04ef0b10.jpg",
@@ -6114,6 +6387,11 @@ var data = [
         },
         "url": "",
         "urls": [
+			{
+				"author": "Nyawapan(プレミアムカフェ)",
+				"sub": "jp",
+				"url": "https://www.bilibili.com/video/BV123411x7nC"
+			},
             {
                 "author": "水瓶shz",
                 "sub": "cnjp",
