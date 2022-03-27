@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2022年3月27日10点56分'}
+var listInfo = {updated_at: '2022年3月27日16点23分'}
 var data = [
     {
         "name": "「港町」",
@@ -7542,7 +7542,7 @@ var data = [
             {
                 "author": "Nyawapan(プレミアムカフェ)",
                 "sub": "jp",
-                "url": "https://www.bilibili.com/video/BV1ob411z7jR"
+                "url": "https://www.bilibili.com/video/BV1Kp4y1b7ZB"
             }
         ],
         "other": "奥之细道",

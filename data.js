@@ -7364,8 +7364,8 @@ var data = [
         "other": "屋久岛",
         "imgs": [],
         "releasedEvent": {
-            "startDate": "2013/03/26",
-            "startDateFmt": "2013/03/26"
+            "startDate": "2013/07/26",
+            "startDateFmt": "2013/07/26"
         }
     },
     {
@@ -7542,7 +7542,7 @@ var data = [
             {
                 "author": "Nyawapan(プレミアムカフェ)",
                 "sub": "jp",
-                "url": "https://www.bilibili.com/video/BV1ob411z7jR"
+                "url": "https://www.bilibili.com/video/BV1Kp4y1b7ZB"
             }
         ],
         "other": "奥之细道",
