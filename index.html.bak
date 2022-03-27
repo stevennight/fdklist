@@ -269,7 +269,7 @@
 					'<div class="title">' + item.releasedEvent.startDateFmt + ' ' + item.name + ' <span onclick="copyToClickBoard(\'' + item.name + '\', event)">' + copyIcon + '</span><span>▾</span></div>' +
 					'<div class="hide_block">' +
 						'<div class="detail-images">' + imagesElText + '</div>' +
-						'<div class="detail">' + item.description + '</div>' +
+						'<div class="detail"><span onclick="copyToClickBoard(\'' + item.description.replaceAll('\'', '\\\'').replaceAll('"', '&quot;') + '\', event)">' + copyIcon + '</span>' + item.description + '</div>' +
 						'<div class="watch ' + (item.url?'':'no-resource') + '">' + (item.url?'观看':'暂无资源') + '</div>';
 
 				var urlsLength = 0;
@@ -322,7 +322,7 @@
 		
 			navigator.clipboard.writeText(content)
 				.then(() => {
-				alert("复制成功!", err)
+				alert("复制成功!")
 			})
 				.catch(err => {
 				alert('复制失败!' + err);
