@@ -322,7 +322,7 @@
 		
 			navigator.clipboard.writeText(content)
 				.then(() => {
-				alert("复制成功!")
+				alert("复制成功!", err)
 			})
 				.catch(err => {
 				alert('复制失败!' + err);

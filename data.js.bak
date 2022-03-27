@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2022年3月27日10点56分'}
+var listInfo = {updated_at: '2022年3月27日 10点56分'}
 var data = [
     {
         "name": "「港町」",
