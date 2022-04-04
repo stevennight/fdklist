@@ -5995,7 +5995,8 @@ var data = [
             "./resource/imgs/JRW1YJ27PX-eyecatches_36f6aca8395e29d5d7bf9aebdc77b14a.jpg",
             "./resource/imgs/JRW1YJ27PX-eyecatches_68efabc4d434aab1934486f5090be060.jpg"
         ],
-        "version": 2
+        "version": 2,
+        "fixed": true
     },
     {
         "name": "「山口」",

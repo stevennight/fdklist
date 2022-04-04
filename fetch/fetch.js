@@ -86,12 +86,13 @@ async function dataHandler(resData) {
         // 新数据默认需要更新图片
         let updateImgs = true;
 
-        if (parseDatum.imgs.length > 1) {
-        }
-
         for (let i=0; i<data.length; i++) {
             let datum = data[i]
             if (matchName(resDatum.name, datum.name)) {
+                // 数据设置为fixed=true，不用api请求回来的数据
+                if (datum.fixed) {
+                    parseDatum = datum;
+                }
                 parseDatum.url = datum.url
                 parseDatum.urls = datum.urls
                 parseDatum.other = datum.other
