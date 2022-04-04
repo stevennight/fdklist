@@ -89,7 +89,7 @@ async function dataHandler(resData) {
         for (let i=0; i<data.length; i++) {
             let datum = data[i]
             if (matchName(resDatum.name, datum.name)) {
-                // 数据设置为fixed=true，不用api请求回来的数据
+                // 数据设置为fixed=true，不用api请求回来的数据。应对api返回的数据错误（例：淡路島）
                 if (datum.fixed) {
                     parseDatum = datum;
                 }
@@ -104,7 +104,7 @@ async function dataHandler(resData) {
             }
         }
 
-        // 图片处理（
+        // 图片处理
         let eyecatchesLen = eyecatches.length
         if (updateImgs && eyecatchesLen > 1) {
             totalApiImgs++
@@ -116,6 +116,14 @@ async function dataHandler(resData) {
                     filename: filename
                 })
                 parseDatum.imgs.push('./resource/imgs/' + filename)
+            }
+        }
+
+        // 重复数据去除
+        for(i in parseData) {
+            let curParseDatumn = parseData[i];
+            if (curParseDatumn.name === parseDatum.name) {
+                return;
             }
         }
 

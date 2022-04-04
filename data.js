@@ -6157,25 +6157,6 @@ var data = [
         "version": 2
     },
     {
-        "name": "「京都 青春物語」",
-        "description": "千年の都、京都。１４万人の学生が暮らす“学生密度が日本一高い町”。育まれた学問の伝統と自由の気風。時代に刻まれた夢と挫折。古都につづる青春の物語▽２０１７年６月３０日初回放送",
-        "releasedEvent": {
-            "startDate": "2017-06-30T21:00:00+09:00",
-            "startDateFmt": "2017/06/30"
-        },
-        "url": "https://www.bilibili.com/video/BV1QE411Z7E9?p=46",
-        "urls": [
-            {
-                "author": "秋秋字幕组",
-                "sub": "cnjp",
-                "url": "https://www.bilibili.com/video/BV1Jx411i7c3"
-            }
-        ],
-        "other": "京都 青春 故事 青春故事",
-        "imgs": [],
-        "version": 2
-    },
-    {
         "name": "「松本」",
         "description": "国宝・松本城を中心とした旧城下町、長野県松本市。教育や伝統工芸、北アルプスの玄関口としてなど、たくさんの顔を持つ松本市を巡る。（２０１７年放送）",
         "releasedEvent": {
