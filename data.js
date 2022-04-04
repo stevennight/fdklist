@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2022年4月4日 13点19分'}
+var listInfo = {updated_at: '2022年4月4日 22点50分'}
 var data = [
     {
         "name": "「橋」",
@@ -79,7 +79,13 @@ var data = [
             "startDateFmt": "2022/04/01"
         },
         "url": "",
-        "urls": [],
+        "urls": [
+            {
+                "author": "秋爸是奶爸",
+                "sub": "jp",
+                "url": "https://www.bilibili.com/video/BV1BZ4y1m7Zy"
+            }
+        ],
         "other": "",
         "imgs": [
             "./resource/imgs/Q8ZN9NX4JK-eyecatch_058bb5e82e1ec6c32f2efebf768d7aae.jpg",
@@ -168,7 +174,7 @@ var data = [
             },
             "startDateFmt": "2022/03/25"
         },
-        "url": "",
+        "url": "https://www.bilibili.com/video/BV1Aq4y1a7Zp",
         "urls": [
             {
                 "author": "秋爸是奶爸",
