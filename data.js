@@ -1,4 +1,4 @@
-var listInfo = {updated_at: '2022年4月5日 18点03分'}
+var listInfo = {updated_at: '2022年4月10日 20点36分'}
 var data = [
     {
         "name": "「伊豆半島 春のマイウェイ」",
@@ -86,95 +86,6 @@ var data = [
             "./resource/imgs/32eca8e0a69fd48b19ffde4f4f2efba7_ll.jpg",
             "./resource/imgs/68541e2d3528292ec404511fdcbc6a00_ll.jpg",
             "./resource/imgs/438264d898d05eeea4cf102f269939fa_ll.jpg"
-        ],
-        "version": 2
-    },
-    {
-        "name": "45分版 「日光うら道 隠れ里」",
-        "description": "日光東照宮が開かれるその遥か前から、栃木県北部の日光は土着の山岳信仰や修験道が深く根づく“聖地”だった。秋から冬にかけて、日光の深山幽谷はひときわ霊妙な姿を見せる。氷点下２０℃近くまで気温が下がる極寒の集落には、厳しい自然への畏怖とともに生きてきた山の民の営みが今なお根づく。知られざる日光を描く▽冬の味覚▽日本一「硬い氷」を目指す親子▽動く陽明門（２０２１年３月放送の再編集）",
-        "releasedEvent": {
-            "id": "g1-130-2022040515841",
-            "startDate": "2022-04-05T14:05:00+09:00",
-            "endDate": "2022-04-05T14:50:00+09:00",
-            "publishedOn": {
-                "type": "BroadcastService",
-                "name": "NHK総合テレビジョン",
-                "videoFormat": [
-                    "2K"
-                ],
-                "encodingFormat": [
-                    "video/X-arib-mpeg2",
-                    "audio/X-arib-mpeg2-aac"
-                ],
-                "images": {
-                    "badgeSmall": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-badge_s.png",
-                        "width": 100,
-                        "height": 50
-                    },
-                    "badge": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-badge.png",
-                        "width": 200,
-                        "height": 100
-                    },
-                    "eyecatchMedium": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch_m.png",
-                        "width": 640,
-                        "height": 360
-                    },
-                    "eyecatchLarge": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch_l.png",
-                        "width": 1280,
-                        "height": 720
-                    },
-                    "eyecatch": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch.png",
-                        "width": 1920,
-                        "height": 1080
-                    },
-                    "hero": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-hero.png",
-                        "width": 1080,
-                        "height": 360
-                    },
-                    "heroMedium": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-hero_m.png",
-                        "width": 1920,
-                        "height": 640
-                    },
-                    "logoSmall": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo_s.png",
-                        "width": 200,
-                        "height": 200
-                    },
-                    "logoMedium": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo_m.png",
-                        "width": 640,
-                        "height": 640
-                    },
-                    "logo": {
-                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo.png",
-                        "width": 1080,
-                        "height": 1080
-                    }
-                },
-                "identifierGroup": {
-                    "serviceId": "g1",
-                    "serviceName": "NHK総合1",
-                    "shortenedName": "NHK総合1",
-                    "shortenedDisplayName": "総合"
-                }
-            },
-            "startDateFmt": "2022/04/05"
-        },
-        "url": "",
-        "urls": [],
-        "other": "",
-        "imgs": [
-            "./resource/imgs/46e11363c8563a6e0dbde7220b2253a6_ll.jpg",
-            "./resource/imgs/691ca1fb36fa46933ef8e6a72642b8dc_ll.jpg",
-            "./resource/imgs/b5780a75e56186eadb71235422364445_ll.jpg",
-            "./resource/imgs/c1530a1b14acade33a76eabe695d98ee_ll.jpg"
         ],
         "version": 2
     },

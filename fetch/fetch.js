@@ -68,6 +68,11 @@ function getData(depth) {
  */
 async function dataHandler(resData) {
     resData.forEach(function (resDatum) {
+        if (resDatum.name.indexOf('45分版') !== -1) {
+            console.log(resDatum.name + '剔除');
+            return;
+        }
+
         totalApiEpisode++
 
         let parseDatum = {};
