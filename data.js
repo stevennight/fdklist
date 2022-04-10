@@ -1,6 +1,184 @@
 var listInfo = {updated_at: '2022年4月5日 18点03分'}
 var data = [
     {
+        "name": "「伊豆半島 春のマイウェイ」",
+        "description": "急しゅんな山々がそびえ、断崖絶壁が続く伊豆半島。観光地として人気を集めてきた一方で、人が生きていくためには厳しい環境でもあった伊豆半島では、独立独歩の気風が育まれた。駿河湾のタカアシガニを伊豆の名物に仕立て上げた気骨の男。鹿や猪による獣害が問題になる中、娘の安全を守るためにと狩猟免許を取得したお母さん。深海魚に魅せられ、今日も底引き漁船に乗り込む女性。早春の半島を、個性豊かな人々を訪ね、旅する。",
+        "releasedEvent": {
+            "id": "s3-130-2022040817186",
+            "startDate": "2022-04-08T21:00:00+09:00",
+            "endDate": "2022-04-08T22:00:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHKBSプレミアム",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/s3/s3-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "s3",
+                    "serviceName": "NHKBSプレミアム",
+                    "shortenedName": "NHKBSプレミアム",
+                    "shortenedDisplayName": "BSプレミアム"
+                }
+            },
+            "startDateFmt": "2022/04/08"
+        },
+        "url": "",
+        "urls": [],
+        "other": "",
+        "imgs": [
+            "./resource/imgs/4fb58cddeaa1bdc86372151fc0a8d34d_ll.jpg",
+            "./resource/imgs/32eca8e0a69fd48b19ffde4f4f2efba7_ll.jpg",
+            "./resource/imgs/68541e2d3528292ec404511fdcbc6a00_ll.jpg",
+            "./resource/imgs/438264d898d05eeea4cf102f269939fa_ll.jpg"
+        ],
+        "version": 2
+    },
+    {
+        "name": "45分版 「日光うら道 隠れ里」",
+        "description": "日光東照宮が開かれるその遥か前から、栃木県北部の日光は土着の山岳信仰や修験道が深く根づく“聖地”だった。秋から冬にかけて、日光の深山幽谷はひときわ霊妙な姿を見せる。氷点下２０℃近くまで気温が下がる極寒の集落には、厳しい自然への畏怖とともに生きてきた山の民の営みが今なお根づく。知られざる日光を描く▽冬の味覚▽日本一「硬い氷」を目指す親子▽動く陽明門（２０２１年３月放送の再編集）",
+        "releasedEvent": {
+            "id": "g1-130-2022040515841",
+            "startDate": "2022-04-05T14:05:00+09:00",
+            "endDate": "2022-04-05T14:50:00+09:00",
+            "publishedOn": {
+                "type": "BroadcastService",
+                "name": "NHK総合テレビジョン",
+                "videoFormat": [
+                    "2K"
+                ],
+                "encodingFormat": [
+                    "video/X-arib-mpeg2",
+                    "audio/X-arib-mpeg2-aac"
+                ],
+                "images": {
+                    "badgeSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-badge_s.png",
+                        "width": 100,
+                        "height": 50
+                    },
+                    "badge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-badge.png",
+                        "width": 200,
+                        "height": 100
+                    },
+                    "eyecatchMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch_m.png",
+                        "width": 640,
+                        "height": 360
+                    },
+                    "eyecatchLarge": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch_l.png",
+                        "width": 1280,
+                        "height": 720
+                    },
+                    "eyecatch": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-eyecatch.png",
+                        "width": 1920,
+                        "height": 1080
+                    },
+                    "hero": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-hero.png",
+                        "width": 1080,
+                        "height": 360
+                    },
+                    "heroMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-hero_m.png",
+                        "width": 1920,
+                        "height": 640
+                    },
+                    "logoSmall": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo_s.png",
+                        "width": 200,
+                        "height": 200
+                    },
+                    "logoMedium": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo_m.png",
+                        "width": 640,
+                        "height": 640
+                    },
+                    "logo": {
+                        "url": "https://www.nhk.jp/assets/images/broadcastservice/bs/g1/g1-logo.png",
+                        "width": 1080,
+                        "height": 1080
+                    }
+                },
+                "identifierGroup": {
+                    "serviceId": "g1",
+                    "serviceName": "NHK総合1",
+                    "shortenedName": "NHK総合1",
+                    "shortenedDisplayName": "総合"
+                }
+            },
+            "startDateFmt": "2022/04/05"
+        },
+        "url": "",
+        "urls": [],
+        "other": "",
+        "imgs": [
+            "./resource/imgs/46e11363c8563a6e0dbde7220b2253a6_ll.jpg",
+            "./resource/imgs/691ca1fb36fa46933ef8e6a72642b8dc_ll.jpg",
+            "./resource/imgs/b5780a75e56186eadb71235422364445_ll.jpg",
+            "./resource/imgs/c1530a1b14acade33a76eabe695d98ee_ll.jpg"
+        ],
+        "version": 2
+    },
+    {
         "name": "「橋」",
         "description": "東洋一の吊り橋として建設された福岡・北九州市の若戸大橋▽関東大震災からの復興で、隅田川に作られた多くの橋の形が違う理由は？▽静岡・三島市の日本一長い「歩行者専用吊り橋」に込めた地元パチンコ店社長の思い▽佐賀・武雄温泉の元遊郭の旅館にある「家族の太鼓橋」▽東海道屈指の橋の名所、愛知・岡崎市▽岩手・住田町の一本橋は何度も流れて▽昭和８年建造の旭川市の旭橋と戦争の記憶▽京都・嵐山の渡月橋の「十三まいり」",
         "releasedEvent": {
@@ -86,7 +264,7 @@ var data = [
                 "url": "https://www.bilibili.com/video/BV1BZ4y1m7Zy"
             }
         ],
-        "other": "",
+        "other": "桥",
         "imgs": [
             "./resource/imgs/Q8ZN9NX4JK-eyecatch_058bb5e82e1ec6c32f2efebf768d7aae.jpg",
             "./resource/imgs/Q8ZN9NX4JK-eyecatches_8a9b1fd0407e6caebe7e1595d46c8654.jpg",
@@ -182,8 +360,13 @@ var data = [
                 "url": "https://www.bilibili.com/video/BV17q4y1Y77T"
             }
         ],
-        "other": "",
-        "imgs": [],
+        "other": "港町",
+        "imgs": [
+            "./resource/imgs/32RPJ64R4Y-eyecatch_c1ff8040dbfcd6ccd251464d7891b90d.webp",
+            "./resource/imgs/32RPJ64R4Y-eyecatches_999e2ee3f5fc35fbfd6930d8c2bdb93c.webp",
+            "./resource/imgs/32RPJ64R4Y-eyecatches_d2ecbe275c1317002bd6925fbcc73bff.webp",
+            "./resource/imgs/32RPJ64R4Y-eyecatches_dcc69a1ae2513ef000a827fb6db0c98d.webp"
+        ],
         "version": 2
     },
     {
@@ -1838,7 +2021,7 @@ var data = [
     },
     {
         "name": "「都電荒川線」",
-        "description": "かつては、東京都内を網の目のように走っていた都電の中で、唯一残った「都電荒川線」。東京の北部１２キロの距離をおよそ１時間。懐かしい町並みや自然豊かな風景を楽しむことができる。地域に密着した荒川線の歴史は、沿線に暮らす人たちの歴史でもある。通勤電車で生まれた青春のロマンス。廃線の危機から救った地元商店街の人たち。半世紀以上、乗降客を見守ってきた古書店の店主。荒川線とともに生きてきた人々の物語。",
+        "description": "東京都内を網の目のように走っていた都電の中で、唯一残った「都電荒川線」。東京の北部１２キロの距離をおよそ１時間。懐かしい町並みや自然豊かな風景を楽しむことができる。地域に密着した荒川線の歴史は、沿線に暮らす人たちの歴史でもある。通勤電車で生まれた青春のロマンス。廃線の危機から救った地元商店街の人たち。半世紀以上、乗降客を見守ってきた古書店の店主。荒川線とともに生きてきた人々の物語（２０２１年放送）",
         "releasedEvent": {
             "startDate": "2021-06-18T21:00:00+09:00",
             "endDate": "2021-06-18T22:00:00+09:00",
@@ -1943,7 +2126,7 @@ var data = [
     },
     {
         "name": "スペシャル 「さくらの歌」",
-        "description": "さくら―。日本人が特別な感情を抱いてきた花。今回は、桜を愛でる心の内を、各地の桜にゆかりのある人々に尋ねる。長野高山村では、満開のしだれ桜の下でピアノの音色が響く。震災で娘を失った父親が、娘への想いをこめて各地に送った１３本の桜の苗木、その行方での出会い。そして、桜をうたったたくさんの楽曲、古今の詩歌も紹介。西行から森山直太朗、ユーミンまで、はかない花に託した日本人と桜の物語。",
+        "description": "さくら―。日本人が特別な感情を抱いてきた花。今回は、桜を愛でる心の内を、各地の桜にゆかりのある人々に尋ねる。長野高山村では、満開のしだれ桜の下でピアノの音色が響く。震災で娘を失った父親が、娘への想いをこめて各地に送った１３本の桜の苗木、その行方での出会い。そして、桜をうたったたくさんの楽曲、古今の詩歌も紹介。西行から森山直太朗、ユーミンまで、はかない花に託した日本人と桜の物語。（２０２１年放送）",
         "releasedEvent": {
             "startDate": "2021-05-28T21:00:00+09:00",
             "endDate": "2021-05-28T22:30:00+09:00",
@@ -7403,6 +7586,25 @@ var data = [
             "startDate": "2013/05/10",
             "startDateFmt": "2013/05/10"
         }
+    },
+    {
+        "name": "「祇園」",
+        "description": "京都・東山、八坂神社の門前町として発展してきた「祇園」は、３００年以上の歴史をもつ花街。細い路地に、昔ながらの紅柄格子のお茶屋が５０軒以上、軒を連ねている。夕暮れ、お座敷に向かうのは美しく着飾った芸妓と、舞妓。お客に披露される優美であでやかな舞。そして、厳しいしきたりの世界でひたすらに芸をみがく芸舞妓たちの日常。花街・祇園に生きる女たちの物語。（２０１３年放送）",
+        "releasedEvent": {
+            "startDate": "2013-04-19T21:00:00+09:00",
+            "startDateFmt": "2013/04/19"
+        },
+        "url": "",
+        "urls": [],
+        "other": "",
+        "imgs": [
+            "./resource/imgs/L6N43P4674-eyecatch_6c288e97b1cafb344989ec700999103f.jpg",
+            "./resource/imgs/L6N43P4674-eyecatches_e4987845c841d9ffae2e27adc0b37dde.jpg",
+            "./resource/imgs/L6N43P4674-eyecatches_22b1b6c744e045f78402684727b419fd.jpg",
+            "./resource/imgs/L6N43P4674-eyecatches_037671bb2bfbb78fa8114289dc6a0010.jpg",
+            "./resource/imgs/L6N43P4674-eyecatches_12029efa37c6cd5b1a132ab055b992da.jpg"
+        ],
+        "version": 2
     },
     {
         "name": "「桜前線の旅」",
